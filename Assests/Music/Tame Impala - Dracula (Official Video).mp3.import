@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nvrwa0vsdc7n"
+path="res://.godot/imported/Tame Impala - Dracula (Official Video).mp3-91458eccd2e763cd95ee47dd7ae38569.mp3str"
+
+[deps]
+
+source_file="res://Assests/Music/Tame Impala - Dracula (Official Video).mp3"
+dest_files=["res://.godot/imported/Tame Impala - Dracula (Official Video).mp3-91458eccd2e763cd95ee47dd7ae38569.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

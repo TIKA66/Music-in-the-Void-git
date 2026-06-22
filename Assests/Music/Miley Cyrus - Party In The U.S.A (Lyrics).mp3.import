@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgfypcmbqj35"
+path="res://.godot/imported/Miley Cyrus - Party In The U.S.A (Lyrics).mp3-96e754fafeec3dad75187e48d74419c6.mp3str"
+
+[deps]
+
+source_file="res://Assests/Music/Miley Cyrus - Party In The U.S.A (Lyrics).mp3"
+dest_files=["res://.godot/imported/Miley Cyrus - Party In The U.S.A (Lyrics).mp3-96e754fafeec3dad75187e48d74419c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cdup6kbs248e8"
+path="res://.godot/imported/PinkPantheress - Stateside  Zara Larsson (Official Video).mp3-34cd87b60e01a296c78c4ee0e38d825e.mp3str"
+
+[deps]
+
+source_file="res://Assests/Music/PinkPantheress - Stateside  Zara Larsson (Official Video).mp3"
+dest_files=["res://.godot/imported/PinkPantheress - Stateside  Zara Larsson (Official Video).mp3-34cd87b60e01a296c78c4ee0e38d825e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

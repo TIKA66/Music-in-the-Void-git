@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cn7wnuhc76b43"
+path="res://.godot/imported/Zach Bryan - Something In The Orange.mp3-e33770b2af64514170f02c828bc978ef.mp3str"
+
+[deps]
+
+source_file="res://Assests/Music/Zach Bryan - Something In The Orange.mp3"
+dest_files=["res://.godot/imported/Zach Bryan - Something In The Orange.mp3-e33770b2af64514170f02c828bc978ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

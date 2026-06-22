@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://dhyvvdq4ve8e3"]
+
+[ext_resource type="Script" uid="uid://b8urgtxr7qk5k" path="res://Assests/Scripts/game_over.gd" id="1_kmqa5"]
+[ext_resource type="Texture2D" uid="uid://bthaqgukvqkm2" path="res://Assests/Sprites/start_game_over.png" id="1_kqhvo"]
+[ext_resource type="Texture2D" uid="uid://bwn3shtrhf8s2" path="res://Assests/Sprites/re-start.png" id="2_lgar2"]
+[ext_resource type="Texture2D" uid="uid://ccj04swdo1a6o" path="res://Assests/Sprites/music.png" id="4_ugita"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lgar2"]
+atlas = ExtResource("1_kqhvo")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxylk"]
+atlas = ExtResource("1_kqhvo")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kmqa5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lgar2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxylk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="GameOver" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_kmqa5")
+
+[node name="Gameover" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(566, 268)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_kmqa5")
+frame_progress = 0.5818125
+
+[node name="Restart" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.40500003
+anchor_top = 0.58500004
+anchor_right = 0.564
+anchor_bottom = 0.712
+offset_left = 0.43997192
+offset_top = -0.08001709
+offset_right = 0.27197266
+offset_bottom = 0.12399292
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "restart"
+icon = ExtResource("2_lgar2")
+flat = true
+autowrap_trim_flags = 0
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Music" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.43500003
+anchor_top = 0.70100003
+anchor_right = 0.544
+anchor_bottom = 0.84700006
+offset_left = -6.1200256
+offset_top = 0.75198364
+offset_right = -5.6880493
+offset_bottom = 1.1439819
+accessibility_name = "music"
+icon = ExtResource("4_ugita")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Music" to="." method="_on_music_pressed"]

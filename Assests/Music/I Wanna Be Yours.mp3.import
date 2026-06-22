@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cla7yy0tas5gp"
+path="res://.godot/imported/I Wanna Be Yours.mp3-93fdd3647b9da3adde6e13653ec71735.mp3str"
+
+[deps]
+
+source_file="res://Assests/Music/I Wanna Be Yours.mp3"
+dest_files=["res://.godot/imported/I Wanna Be Yours.mp3-93fdd3647b9da3adde6e13653ec71735.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

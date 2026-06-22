@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnlq1hlw6ahq5"
+path="res://.godot/imported/Laufey - Madwoman (Official Music Video).mp3-3e074c970494546a0eb69123cbc7366c.mp3str"
+
+[deps]
+
+source_file="res://Assests/Music/Laufey - Madwoman (Official Music Video).mp3"
+dest_files=["res://.godot/imported/Laufey - Madwoman (Official Music Video).mp3-3e074c970494546a0eb69123cbc7366c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

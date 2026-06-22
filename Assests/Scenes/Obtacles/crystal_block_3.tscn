@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://b41a6pb3arncm"]
+
+[ext_resource type="Texture2D" uid="uid://ehvp6fya1drq" path="res://Assests/Sprites/tilesheet.png" id="1_anprm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj3or"]
+atlas = ExtResource("1_anprm")
+region = Rect2(124, 0, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fin5b"]
+atlas = ExtResource("1_anprm")
+region = Rect2(124, 32, 31, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_no87h"]
+atlas = ExtResource("1_anprm")
+region = Rect2(124, 64, 31, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4c4yc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj3or")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fin5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_no87h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Crystal-Block-3" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(15.700003, 144.59999)
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_4c4yc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(15.700003, 144.59999)
+scale = Vector2(7, 7)
+polygon = PackedVector2Array(4, -16, 5, -16, -7, -16, -11, -16, -12, -16, -12, -15, 3, 0, 4, 0, 5, 0, 5, -16, 5, -16)

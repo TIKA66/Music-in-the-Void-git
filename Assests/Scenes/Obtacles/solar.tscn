@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbupdcpu2agom"]
+
+[ext_resource type="Texture2D" uid="uid://cyj3cgilovva8" path="res://Assests/Sprites/obstacles.png" id="1_mnv44"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q67ka"]
+atlas = ExtResource("1_mnv44")
+region = Rect2(33, 64, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8vt4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q67ka")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hg1on"]
+radius = 8.1024685
+
+[node name="Solar" type="Area2D"]
+scale = Vector2(10, 10)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_8vt4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.6999999, 0.29999998)
+shape = SubResource("CircleShape2D_hg1on")

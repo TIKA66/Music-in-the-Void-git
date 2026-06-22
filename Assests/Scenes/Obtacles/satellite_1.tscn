@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8cbtps2tfmmb"]
+
+[ext_resource type="Script" uid="uid://cnwgklyj4w5ww" path="res://Assests/Scripts/satellite_1.gd" id="1_6dfcg"]
+[ext_resource type="Texture2D" uid="uid://cyj3cgilovva8" path="res://Assests/Sprites/obstacles.png" id="1_isugc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dfcg"]
+atlas = ExtResource("1_isugc")
+region = Rect2(0, 32, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5livk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dfcg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x76mm"]
+size = Vector2(17, 16)
+
+[node name="Satellite1" type="Area2D"]
+scale = Vector2(10, 10)
+script = ExtResource("1_6dfcg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_5livk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_x76mm")

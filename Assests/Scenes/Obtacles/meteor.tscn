@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://bryami18ek8lx"]
+
+[ext_resource type="Script" uid="uid://bgeoj6e4mhj8s" path="res://Assests/Scripts/meteor.gd" id="1_a6ip7"]
+[ext_resource type="Texture2D" uid="uid://cyj3cgilovva8" path="res://Assests/Sprites/obstacles.png" id="1_ies1m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8efag"]
+atlas = ExtResource("1_ies1m")
+region = Rect2(0, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtl4m"]
+atlas = ExtResource("1_ies1m")
+region = Rect2(33, 0, 33, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jt3m"]
+atlas = ExtResource("1_ies1m")
+region = Rect2(66, 0, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xocgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8efag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtl4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jt3m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bcqea"]
+radius = 7.0
+
+[node name="Meteor" type="Area2D"]
+scale = Vector2(10, 10)
+script = ExtResource("1_a6ip7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_xocgo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bcqea")

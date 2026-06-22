@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyioawtq0iybq"
+path="res://.godot/imported/@coldplay  - Sparks (Lyrics).mp3-624f948f5c180fc4426056a7925cdab6.mp3str"
+
+[deps]
+
+source_file="res://Assests/Music/@coldplay  - Sparks (Lyrics).mp3"
+dest_files=["res://.godot/imported/@coldplay  - Sparks (Lyrics).mp3-624f948f5c180fc4426056a7925cdab6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

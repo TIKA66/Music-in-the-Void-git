@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://6bu8i07ky4l5"]
+
+[ext_resource type="Script" uid="uid://d31t61tbac7r5" path="res://Assests/Scripts/intro_animations.gd" id="1_pqxec"]
+[ext_resource type="Texture2D" uid="uid://r7yw0j46whia" path="res://Assests/BG/far_back.png" id="2_aah0a"]
+[ext_resource type="Texture2D" uid="uid://smx412lcfydd" path="res://Assests/BG/stars.png" id="3_a07ag"]
+[ext_resource type="Texture2D" uid="uid://c06lc83umm2fj" path="res://Assests/BG/stars2.png" id="4_k8eia"]
+[ext_resource type="Texture2D" uid="uid://b5bh4a8x653kk" path="res://Assests/BG/stars3.png" id="5_4k6n2"]
+[ext_resource type="FontFile" uid="uid://do7lijsqmqc1o" path="res://Assests/Silkscreen-Regular.ttf" id="6_aah0a"]
+[ext_resource type="AudioStream" uid="uid://mnxxq5engtdt" path="res://Assests/Music/creepy_space_intro.mp3" id="7_a07ag"]
+
+[node name="IntroAnimations" type="Node2D"]
+script = ExtResource("1_pqxec")
+
+[node name="FarBackBG" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+texture = ExtResource("2_aah0a")
+
+[node name="Star1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.9529412)
+position = Vector2(576, 324)
+scale = Vector2(4.5, 5)
+texture = ExtResource("3_a07ag")
+
+[node name="Star2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.49803922)
+position = Vector2(576, 324)
+texture = ExtResource("4_k8eia")
+
+[node name="Star3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.7019608)
+position = Vector2(576, 324)
+texture = ExtResource("5_4k6n2")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 330.0
+offset_top = 236.0
+offset_right = 834.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Text"
+theme_override_colors/font_color = Color(0.6745098, 0.44313726, 0.7411765, 1)
+theme_override_colors/font_outline_color = Color(0.16862746, 0.10980392, 0.18431373, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("6_aah0a")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Creepy_Intro" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_a07ag")

@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://skyaai4aotg"]
+
+[ext_resource type="PackedScene" uid="uid://cis5k7fem4wef" path="res://Assests/Scenes/bg.tscn" id="1_22jtd"]
+[ext_resource type="Script" uid="uid://bqmacr226tryp" path="res://Assests/Scripts/main.gd" id="1_v5uv1"]
+[ext_resource type="PackedScene" uid="uid://dnuisvotbsgu2" path="res://Assests/Scenes/ground.tscn" id="2_sdxpy"]
+[ext_resource type="PackedScene" uid="uid://c56xnrrjpfmfy" path="res://Assests/Scenes/player.tscn" id="3_v5uv1"]
+[ext_resource type="PackedScene" uid="uid://6bu8i07ky4l5" path="res://Assests/Scenes/intro_animations.tscn" id="5_2207v"]
+[ext_resource type="PackedScene" uid="uid://cg6rt8vgdulkv" path="res://Assests/Scenes/hud.tscn" id="5_v5uv1"]
+[ext_resource type="PackedScene" uid="uid://dhyvvdq4ve8e3" path="res://Assests/Scenes/game_over.tscn" id="7_efptp"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_v5uv1")
+
+[node name="BG" parent="." instance=ExtResource("1_22jtd")]
+
+[node name="ground" parent="." instance=ExtResource("2_sdxpy")]
+
+[node name="Player" parent="." instance=ExtResource("3_v5uv1")]
+position = Vector2(82, 472.00003)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="HUD" parent="." instance=ExtResource("5_v5uv1")]
+
+[node name="SongPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="IntroAnimations" parent="." instance=ExtResource("5_2207v")]
+
+[node name="GameOver" parent="." instance=ExtResource("7_efptp")]
+
+[node name="Points" type="AudioStreamPlayer2D" parent="."]
+
+[node name="GameOverMusic" type="AudioStreamPlayer2D" parent="."]

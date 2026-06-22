@@ -1,0 +1,184 @@
+[gd_scene load_steps=8 format=3 uid="uid://bx53pc2e08ecd"]
+
+[ext_resource type="Texture2D" uid="uid://r7yw0j46whia" path="res://Assests/BG/far_back.png" id="1_0mrko"]
+[ext_resource type="FontFile" uid="uid://do7lijsqmqc1o" path="res://Assests/Silkscreen-Regular.ttf" id="1_75r6i"]
+[ext_resource type="Script" uid="uid://bcrwqbtxgy7xp" path="res://Assests/Scripts/song_select.gd" id="1_yxx4l"]
+[ext_resource type="Script" uid="uid://bodfhvhc81qe3" path="res://Assests/Scripts/game_data.gd" id="3_yxx4l"]
+[ext_resource type="Texture2D" uid="uid://dy74qidyuy16k" path="res://Assests/Sprites/play.png" id="4_ntqr2"]
+
+[sub_resource type="Theme" id="Theme_yxx4l"]
+
+[sub_resource type="Theme" id="Theme_ntqr2"]
+default_font = ExtResource("1_75r6i")
+
+[node name="SongSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -3.0
+offset_right = 1137.0
+offset_bottom = 637.0
+accessibility_name = "SongSelect"
+script = ExtResource("1_yxx4l")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 653.0
+accessibility_name = "bg"
+texture = ExtResource("1_0mrko")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -297.5
+offset_top = 23.0
+offset_right = 302.5
+offset_bottom = 88.0
+grow_horizontal = 2
+accessibility_name = "text"
+theme_override_colors/font_color = Color(0.96862745, 0.67058825, 0.9490196, 1)
+theme_override_colors/font_outline_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("1_75r6i")
+theme_override_font_sizes/font_size = 50
+text = "CHOOSE YOUR MUSIC"
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.062000003
+anchor_top = 0.21700001
+anchor_right = 0.95800006
+anchor_bottom = 0.58400005
+offset_left = -2.4940033
+offset_top = 30.119995
+offset_right = 4.7539063
+offset_bottom = 30.23996
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "setlist"
+theme = SubResource("Theme_yxx4l")
+theme_override_colors/font_color = Color(0.96862745, 0.67058825, 0.9490196, 1)
+theme_override_colors/font_outline_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_75r6i")
+theme_override_font_sizes/font_size = 21
+item_count = 11
+item_0/text = "Stateside - pinkpantheress, zara larsson"
+item_1/text = "Dracula - Tame Impala"
+item_2/text = "Party in the USA - Katy Perry"
+item_3/text = "No surprises - radiohead "
+item_4/text = "Sparks - Coldplay"
+item_5/text = "I Wanna be Yours - Arctic Monkeys (clean)"
+item_6/text = "Something in the Orange - Zach Bryan"
+item_7/text = "Cure - Olivia Rodrigo"
+item_8/text = "Drag Path - 21 Pilots"
+item_9/text = "From the start - Laufey"
+item_10/text = "Madwoman - Laufey"
+
+[node name="SelectSongButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 423.0
+offset_top = -214.0
+offset_right = 701.0
+offset_bottom = -167.0
+grow_vertical = 2
+accessibility_name = "selectsong"
+theme = SubResource("Theme_ntqr2")
+theme_override_colors/font_color = Color(0.96862745, 0.67058825, 0.9490196, 1)
+theme_override_colors/font_focus_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_colors/font_pressed_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_colors/font_hover_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_colors/font_outline_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("1_75r6i")
+theme_override_font_sizes/font_size = 30
+text = " Select Song: "
+alignment = 0
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -81.5
+offset_top = -76.0
+offset_right = 82.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+accessibility_name = "play"
+theme_override_fonts/font = ExtResource("1_75r6i")
+theme_override_font_sizes/font_size = 40
+text = "PLAY"
+icon = ExtResource("4_ntqr2")
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = -86.0
+offset_top = -29.0
+offset_right = -33.0
+offset_bottom = -2.0
+accessibility_name = "back"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+mode = 1
+title = "Open a File"
+file_mode = 0
+access = 2
+
+[node name="AudioPreviewPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="GameData" type="Node" parent="."]
+script = ExtResource("3_yxx4l")
+
+[node name="SongNameLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = 151.0
+offset_right = 10.0
+offset_bottom = 187.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "songname"
+theme_override_colors/font_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_colors/font_outline_color = Color(0.95686275, 0.4745098, 0.9372549, 1)
+theme_override_fonts/font = ExtResource("1_75r6i")
+theme_override_font_sizes/font_size = 28
+text = "Song Name: "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="DifficultyLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+offset_left = 292.0
+offset_top = 517.0
+offset_right = 805.205
+offset_bottom = 556.0
+accessibility_name = "Difficulty"
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_75r6i")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="item_activated" from="ItemList" to="." method="_on_item_list_item_activated"]
+[connection signal="pressed" from="SelectSongButton" to="." method="_on_select_song_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8a50g727kmuo"]
+
+[ext_resource type="Texture2D" uid="uid://cyj3cgilovva8" path="res://Assests/Sprites/obstacles.png" id="1_a3wyv"]
+[ext_resource type="Script" uid="uid://cuh5vd8bndx8g" path="res://Assests/Scripts/rocket.gd" id="1_oini3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oini3"]
+atlas = ExtResource("1_a3wyv")
+region = Rect2(0, 64, 33, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1xjls"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oini3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Rocket" type="Area2D"]
+rotation = 4.052376
+scale = Vector2(10, 10)
+script = ExtResource("1_oini3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_1xjls")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-8, 6, -5, 6, 2, 5, 4, 3, 7, -4, 7, -7, 6, -8, 2, -8, -3, -7, -7, -3, -7, -1, -5, -1, -5, 2, -8, 2)
